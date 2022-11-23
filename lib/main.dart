@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:counter_7/form.dart';
-import 'package:counter_7/data.dart';
+import 'package:counter_7/view/form.dart';
+import 'package:counter_7/view/data.dart';
 import 'package:counter_7/drawer.dart';
 
 void main() {
