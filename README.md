@@ -87,9 +87,67 @@ Implementasi dari Navigator pada flutter menggunakan prinsip Stack. Ketika ingin
 4. menyesuaikan drawer di dalam main.dart agar tertampil pada semua page.
 
 
+#
 
+# Tugas 9 : Integrasi Web Service pada Flutter
+#
 
+#
+### Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Bisa mengambil data JSON tanpa membuat model dalam bentuk data yang _raw_ seperti Map dengan key yang menyimpan value masing-masing. Namun dengan metode seperti ini tidak efisien dan lebih sulit pemakaiannya karena dengan membuat model terlebih dahulu pengklasifikasian dari data lebih mudah dan lebih teratur.
 
+#
+### Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+1. TextStyle: berfungsi untuk memberikan styling pada text
+
+2. Text: untuk menampilkan text pada aplikasi yang dibuat
+
+3. Column: berfungsi untuk mengatur posisi letak widget berdasarkan kolom
+
+4. MaterialApp: merupakan parent yang akan menerapkan style material design pada sesuatu yang diapitnya
+
+5. Scaffold: untuk mengatur struktur visual layout yang diimplementasikan melalui material design
+
+6. Card : berfungsi untuk menampilkan card bawaan dari library flutter
+
+7. Drawer : berfungsi untuk memberikan navigation bar pada aplikasi
+
+8. ListView.builder : berfungsi untuk menampilkan list of children yang dapat di scroll
+
+9. SizedBox : berfungsi untuk membuat box yang dapat diubah ukurannya
+
+10. Container : berfungsi sebagai wadah dari widget lainnya
+
+11. TextSpan : sebuah _markup_ dari sebagian text yang dapat diedit stylenya.
+
+12. FloatingActionButton: untuk membuat suatu tombol
+
+13. FutureBuilder : berfungsi untuk fetching data
+
+14. Padding : membuat layout pada tampilan aplikasi untuk masing-masing widget
+
+15. EdgeInsets : berfungsi untuk membuat offset di dalam sebuah kotak.
+
+#
+### Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+
+1. Membuat folder model yang berisi konten dari data-data dalam file JSON
+2. Membuat method dengan http yang direfactor menjadi file baru dengan bantuan import  'package:http/http.dart' as http
+3. Response pada http tersebut akan diubah menjadi menjadi object Dart
+4. Data dapat memanfaatkan FutureWidget untuk menampilkan data tersebut, widget ini digunakan karena menggunakan future yang membutuhkan beberapa waktu terlebih dulu untuk memproses data
+5. Melakukan loop pada data yang terdapat pada database untuk dengan atribut-atribut data masing-masing untuk diampilkan.
+
+#
+### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas
+
+1. Membuat file watchlist_view.dart untuk menampung halaman json
+2. Menambah path untuk routing ke watchlist_view di dalam drawer.dart
+3. Membuat folder view, model dan data untuk mengelompokan sesuai fungsi masing masing
+menambahkan drawer pada file watchlist_view
+4. membuat file data_watchlist.dart dan menaruhnya pada folder data untuk mengambil data dari url json
+5. Melakukan fetch pada file watchlist_view.dart dengan bantuan file di folder model yaitu watchlist.dart
+kemudian data yang diambil akan ditampilkan di mywatchlist_view.dart
+6. Membuat navigator push yang akan menampilkan detail dari film yang diGET ketika ditekan
 
 
 "# pbp-flutter-lab" 
